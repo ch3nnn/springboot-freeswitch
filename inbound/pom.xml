@@ -1,8 +1,3 @@
-# 说明文档
-
-## inbound 代码示例
-### pom依赖
-```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Licensed to the Apache Software Foundation (ASF) under one or more
@@ -125,49 +120,3 @@
     </dependencies>
 
 </project>
-
-```
-
-
-
-## outbound示例
-
-### 修改dialplan配置
-
-出于演示目的，这里修改/usr/local/freeswitch/conf/dialplan/default.xml，在文件开头部分添加一段：
-
-```
-<extension name="socket_400_example">
-      <condition field="destination_number" expression="^400\d+$">
-            <action application="socket" data="localhost:8040 async full"/>
-      </condition>
-</extension>
-```
-即：当来电的被叫号码为400开头时，fs将利用socket，连接到localhost:8040
-
-
-## 接口文档
-### 一、机器人外呼发起
-
-* 接口地址: /callcenter/api/startOutbound
-* 请求方法: POST
-* 请求参数:
-
-* 返回数据:
-```
-{
-code: 200,
-message: "success"
-data: null
-}
-message: 请求处理消息
-code = 200  请求处理成功
-code != 200 请求处理失败，警告消息提示：message内容
-```
-
-
-
-## 相关资料
-[freeswitch笔记(3)-esl入门](https://www.cnblogs.com/yjmyzz/p/freeswitch-esl-java-client-turorial.html)
-
-[github: freeswitch 事件套接字基于 netty 4 并具有一些新功能](https://github.com/zhouhailin/freeswitch-esl-all)
