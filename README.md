@@ -168,6 +168,6 @@ code != 200 请求处理失败，警告消息提示：message内容
 
 
 ## 相关资料
-[freeswitch笔记(3)-esl入门](https://www.cnblogs.com/yjmyzz/p/freeswitch-esl-java-client-turorial.html)
+[freeswitch笔记](https://www.cnblogs.com/yjmyzz/p/freeswitch-esl-java-client-turorial.html)
 
 [github: freeswitch 事件套接字基于 netty 4 并具有一些新功能](https://github.com/zhouhailin/freeswitch-esl-all)
